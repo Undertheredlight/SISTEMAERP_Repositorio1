@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalGym - Curso de Odoo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://www.transparenttextures.com/patterns/code.png');
+            background-size: cover;
+            color: #333;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen">
+    <div class="bg-white bg-opacity-80 rounded-lg shadow-lg p-6 max-w-lg mx-auto">
+        <h1 class="text-2xl font-bold mb-4 text-center">Bienvenido a DigitalGym</h1>
+        <p class="mb-4 text-justify">
+            Digital Gym ha llegado al mercado para revolucionar el mundo del sector fitness. Queremos ser pioneros en la automatización y accesibilidad de las aplicaciones para móviles que implementen los gimnasios y usuarios del colectivo.
+            Por primera vez en el mercado y al alcance de todos, una aplicación que le permitirá al usuario tener acceso a una infinidad de funcionalidades como:  el reservar entrenamientos y actividades colectivas, solicitar rutinas de entrenamiento personal, acceder a un material audiovisual, chat abierto 24 horas para gestionar dudas e inconvenientes, solicitar un plan de nutrición personalizado,  obtener un seguimiento del progreso que ha registrado el usuario (incluyendo estudio médico, antropométrico).
+            Creemos firmemente que nuestra aplicación será de gran utilidad para la sociedad, cada vez más, el índice de personas que realiza actividad física en nuestra época es mayor, esto nos posiciona en un momento muy adecuado para poner en marcha este proyecto. Por lo que la cantidad de clientes potenciales está en auge.
+        </p>
+        <h2 class="text-xl font-semibold mb-2">Opciones de aprendizaje</h2>
+        <p class="mb-4 text-justify">Seleccione una de las siguientes opciones para continuar:</p>
+        <div class="flex flex-col space-y-2">
+            <button onclick="window.location.href='https://www.odoo.com/documentation/17.0/es/'" class="bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600 transition">
+                Aprender más sobre Odoo 17
+            </button>
+            <button onclick="document.getElementById('courses').classList.toggle('hidden');" class="bg-gray-500 text-white font-semibold py-2 rounded hover:bg-gray-600 transition">
+                Aprender las aplicaciones que se van a usar en DigitalGym
+            </button>
+        </div>
+        <div id="courses" class="hidden mt-4">
+            <h3 class="font-semibold mb-2">Cursos disponibles:</h3>
+            <ul class="list-disc pl-5">
+                <li><a href="https://www.odoo.com/es_ES/slides/sales-17" target="_blank" class="text-blue-600 hover:underline">Ventas</a></li>
+                <li><a href="https://www.odoo.com/es_ES/slides/crm-16" target="_blank" class="text-blue-600 hover:underline">CRM 16</a></li>
+                <li><a href="https://www.odoo.com/es_ES/slides/smartclass-human-resources-v17-344" target="_blank" class="text-blue-600 hover:underline">Empleados</a></li>
+                <li><a href="https://www.odoo.com/es_ES/slides/features-and-global-settings-34" target="_blank" class="text-blue-600 hover:underline">Facturas</a></li>
+                <li><a href="https://www.odoo.com/es_ES/slides/formacion-tecnica-58" target="_blank" class="text-blue-600 hover:underline">Formación Técnica</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // No se necesita script adicional
+    </script>
+</body>
+</html>
