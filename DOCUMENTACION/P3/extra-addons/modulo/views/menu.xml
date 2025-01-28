@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="Soluciones" name="Soluciones DigiGym" sequence="1"/>
+    <menuitem id="Usuarios" name="Usuarios" parent="Soluciones" action="action_usuario"/>
+    <menuitem id="Productos" name="Productos" parent="Soluciones" action="action_producto"/>
+    <menuitem id="Pagos" name="Pagos" parent="Soluciones" action="action_pagos"/>
+</odoo>

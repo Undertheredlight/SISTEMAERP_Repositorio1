@@ -1,0 +1,62 @@
+
+version: '3.3'
+services:
+  web:
+    image: odoo:17
+    depends_on:
+      - db
+    ports:
+      - 8069:8069
+    volumes:
+      #- ./volumesOdoo/addons:
+      #- ./config/odoo.conf:/etc/odoo
+      - ./config:/etc/odoo
+      - ./extra-addons:/mnt/extra-addons
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD_FILE=/run/secrets/postgresql_password
+    secrets:
+      - postgresql_password
+
+  db:
+    image: postgres:15
+
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgresql_password
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - ./volumesOdoo/dataPostgreSQL:/var/lib/postgresql/data
+    secrets:
+      - postgresql_password
+
+  nginx-manager:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    container_name: nginx-manager
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    volumes:
+      - ./nginx/data:/data
+      - ./nginx/letsencrypt:/etc/letsencrypt
+    
+
+volumes:
+  nginx-letsencrypt:
+    external: true
+  nginx-data:
+    external: true
+    
+
+  
+
+secrets:
+  postgresql_password:
+    file: odoo_pg_pass/postgresql_password.txt
+

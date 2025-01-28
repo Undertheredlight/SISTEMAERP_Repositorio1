@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="seq_modulo_pagos" model="ir.sequence">
+            <field name="name">Referencia Pagos</field>
+            <field name="code">modulo.pagos</field>
+            <field name="prefix">P</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"></field>
+        </record>
+    </data>
+</odoo>

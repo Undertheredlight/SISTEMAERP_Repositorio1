@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_modulo_producto,modulo.producto,model_modulo_producto,base.group_user,1,1,1,1
+access_modulo_usuarios,modulo.usuarios,model_modulo_usuarios,base.group_user,1,1,1,1
+access_modulo_pagos,modulo.pagos,model_modulo_pagos,base.group_user,1,1,1,1

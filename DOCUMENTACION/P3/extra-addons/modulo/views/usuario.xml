@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="view_modulo_usuario_list" model="ir.ui.view">
+        <field name="name">modulo.usuarios.list</field>
+        <field name="model">modulo.usuarios</field>
+        <field name="arch" type="xml">
+            <tree string="Listado">
+                <field name="name"></field>
+                <field name="edad"></field>
+                <field name="direccion"></field>
+                <field name="telefono"></field>
+                <field name="mail"></field>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_modulo_usuario_form" model="ir.ui.view">
+        <field name="name">modulo.usuarios.list</field>
+        <field name="model">modulo.usuarios</field>
+        <field name="arch" type="xml">
+            <form name="Formulario">
+                <sheet>
+                    <group>
+                        <field name="name"></field>
+                        <field name="edad"></field>
+                        <field name="direccion"></field>
+                        <field name="telefono"></field>
+                        <field name="mail"></field>
+                    </group>
+                    <notebook>
+                        <page string="Datos Licencias">
+                            <group>
+                                <field name="producto"></field>
+                                <field name="descripcion_producto"></field>
+                                <field name="nombre_producto"></field>
+                                <field name="precio_producto"></field>
+                                <field name="currency_id" invisible="1"></field>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_modulo_usuario_search" model="ir.ui.view">
+        <field name="name">modulo.usuarios.list</field>
+        <field name="model">modulo.usuarios</field>
+        <field name="arch" type="xml">
+            <search string="Busqueda">
+                <field name="name"></field>
+                <field name="telefono"></field>
+                <field name="mail"></field>
+                <field name="producto"></field>
+                <field name="nombre_producto"></field>
+            </search>
+        </field>
+    </record><!-- -->
+
+
+    <record id="action_usuario" model="ir.actions.act_window">
+        <field name="name">Clientes</field>
+        <field name="res_model">modulo.usuarios</field>
+        <field name="view_mode">tree,form,search</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Creamos un usuario
+            </p>
+        </field>
+    </record>
+</odoo>
